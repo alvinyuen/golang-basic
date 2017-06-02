@@ -1,14 +1,18 @@
-Learning golang
+# Learning golang
 
 1. Statically typed language where all variables have assigned types. You can set types explicitly or implicitly
 
-Explicit
+* Explicit
+```
 var aInteger int = 42
 var aString string = "some text"
+```
 
-Implicit
+* Implicit
+```
 anInteger := 42
 aString := "This is Go!"
+```
 
 2. Like C, Go supports the use of pointers, variables that store the address of another value
 	var p *int
@@ -19,16 +23,17 @@ aString := "This is Go!"
 Notes
 ..* Go has runtime that's statically linked into each compiled application. Along with any external packages that are declared and imported in the application source code. The runtime operates in its own background threads, So like other managed languages such as Java & C#, memory is managed completely in the background. And you don't have to explicitly allocate or deallocate memory.
 
-#The new() function
-..* Allocates but does not initialize memory
-..* Results in zeroed storage but returns a memory address
+## The new() function
+* Allocates but does not initialize memory
+* Results in zeroed storage but returns a memory address
 
-#The make() function
-..* Allocates and initilizes memory
-..* Allocates non-zeroed storage and returns a memory address
+## The make() function
+* Allocates and initilizes memory
+* Allocates non-zeroed storage and returns a memory address
 
 Use make() to allocate and initialize memory
-``` m := make(map[string]int)
+```
+m := make(map[string]int)
 m["key"] = 42
 fmt.Println(m)
 ```
